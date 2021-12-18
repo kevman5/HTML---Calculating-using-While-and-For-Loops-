@@ -1,0 +1,50 @@
+<html>
+<head>
+<script>
+function Process()
+{
+	var num1, num2, product1, product2, ifresult;
+	num1 = parseInt(document.getElementById('num1').value);
+	num2 = parseInt(document.getElementById('num2').value);
+	product1 = 1;
+	for (var x=num1; x <= num2; x++)
+	product1 = product1 * x;
+	document.getElementById('ans1').value = product1;
+
+	product2 = 1;
+	var x = num1;
+	while (x <= num2)
+	{
+	  product2 = product2 * x;
+	  x++;
+	}
+		document.getElementById('ans2').value = product2;
+		
+		if (product2 > product1)
+		document.getElementById('ans3').value = "product1 is less than or equal to product2."
+		
+		document.getElementById('ans3').value ="product1 is greater than product2."
+
+}
+</script>
+</head>
+<body>
+
+Number 1: <input type="text" id="num1" />
+<br />
+
+Number 2: <input type="text" id="num2" />
+<br />
+
+<input type="button" value="Calculate" onClick="Process();" />
+<br />
+Product from a For Loop: <input type="text" id="ans1" />
+<br />
+Product from a While Loop: <input type="text" id="ans2" />
+<br />
+Result of the IF/ELSE Statement: <input type="text" id="ans3" />
+
+
+
+</body>
+</html>
